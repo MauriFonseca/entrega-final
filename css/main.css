@@ -105,7 +105,7 @@ input {
 }
 
 .__TN {
-  padding-right: 65%;
+  padding-right: 55%;
   margin: 1%;
 }
 
@@ -128,6 +128,7 @@ input {
   width: 100%;
   height: 6em;
   background-color: rgba(166, 0, 255, 0.256);
+  border-radius: 12px;
 }
 .formTN .formTN1 .envio_formulario {
   padding-left: 4.7em;
@@ -135,13 +136,15 @@ input {
 
 .form-img {
   display: flex;
-  width: 100%;
+  width: 40%;
   height: auto;
-  padding-left: 65%;
-  padding-top: 1%;
   position: absolute;
-  right: 100px;
+  right: 10px;
   top: 250px;
+}
+
+.maps {
+  right: 6%;
 }
 
 ._dos {
@@ -187,7 +190,12 @@ iframe {
   gap: 2%;
   width: 100%;
   height: auto;
-  margin: 6px;
+  margin: 6px 0;
+}
+
+.carousel-control- {
+  width: 0%;
+  margin: 0 10px;
 }
 
 .data {
@@ -290,9 +298,24 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  .formTN1 {
-    border-radius: 5px;
+  .formTN {
+    width: 100%;
+  }
+  .formTN .formTN1 {
+    display: flex;
+    flex-direction: column;
     font-size: small;
+    gap: 2em;
+    background-color: rgba(248, 0, 50, 0.652);
+    margin: 0 3% 3% 3%;
+    border-radius: 9px;
+  }
+  .formTN .formTN1 .label-form {
+    width: 100%;
+    padding: 1%;
+  }
+  .formTN .formTN1 .label-form .btn-form {
+    width: 50%;
   }
   .text_espace {
     width: 100%;
@@ -308,7 +331,7 @@ footer {
     width: 100%;
     margin-top: 1%;
     padding-right: 0%;
-    margin: 0%;
+    margin: 3% 0%;
   }
 }
 

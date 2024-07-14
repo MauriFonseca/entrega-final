@@ -46,10 +46,25 @@
             display: flex;
             flex-direction: column;
         }
-        .formTN1{
-            border-radius: 5px;
-            font-size: small;
-        }
+        .formTN{
+            width: 100%;
+            .formTN1{
+                display: flex;
+                flex-direction: column;
+                font-size: small;
+                gap: 2em;
+                background-color: map-get($map: $colors , $key: back-formularios);
+                margin: 0 3% 3% 3%;
+                border-radius: 9px;
+                .label-form{
+                    width: 100%;
+                    padding: 1%;
+                    .btn-form{
+                        width: 50%;
+                    }
+                }
+            }
+        }        
         .text_espace{
             @include sizes(100%, 6em);
         }
@@ -63,6 +78,6 @@
             width: 100%;
             margin-top: 1%;
             padding-right: 0%;
-            margin: 0%;
+            margin: 3% 0%;
         }
 }

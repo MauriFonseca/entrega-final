@@ -9,7 +9,7 @@ input{
     margin-top: 1%;
 }
 .__TN{
-    padding-right: 65%;
+    padding-right: 55%;
     margin: 1%;
 }
 .formTN{
@@ -28,6 +28,7 @@ input{
         .text_espace{
             @include sizes(100%, 6em);
             background-color: map-get($map: $colors , $key: espacio-texto-formularios);
+            border-radius: 12px;
         }
         .envio_formulario{
             padding-left: 4.7em;
@@ -36,12 +37,13 @@ input{
 }
 .form-img{
     display: flex;
-    @include sizes(100%, auto);
-    padding-left: 65%;
-    padding-top: 1%;
+    @include sizes(40%, auto);
     position: absolute;
-    right: 100px;
-    top: 250px; 
+    right: 10px;
+    top: 250px;
+}
+.maps{
+    right: 6%;
 }
 ._dos{
     padding-bottom: 2.2%;
