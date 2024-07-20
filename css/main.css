@@ -41,14 +41,15 @@ ul li {
   gap: 5px;
   margin: 5px 5px;
 }
-
-.btn {
+.navegacion-menu .btn {
   background-color: rgb(213, 213, 41);
+}
+.navegacion-menu .btn-efect {
   animation-name: efecto_boton;
   animation-timing-function: ease-in;
   animation-duration: 2s;
 }
-.btn:hover {
+.navegacion-menu .btn:hover {
   background-color: rgba(251, 0, 117, 0.41);
 }
 
@@ -251,7 +252,37 @@ footer {
 }
 
 @media (max-width: 711px) {
-  .contenedor-items {
+  .contenedor-uno {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1em;
+  }
+  .contenedor-uno .header-index {
+    width: 100%;
+  }
+  .contenedor-uno .navegacion {
+    display: flex;
+    justify-content: center;
+  }
+  .contenedor-uno .navegacion-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+  .main-index {
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+  }
+  .main-index .carousel slide {
+    width: 100%;
+  }
+  .main-index .contenedor-items {
     display: flex;
     flex-direction: column;
   }
@@ -264,32 +295,41 @@ footer {
   }
 }
 @media (max-width: 576px) {
-  main {
-    padding: 0;
+  .contenedor-uno {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1em;
   }
-  .btn {
-    background-color: rgba(255, 30, 5, 0.586);
+  .contenedor-uno .header-index {
     width: 100%;
   }
-  .navegacion-menu {
+  .contenedor-uno .navegacion {
+    display: flex;
+    justify-content: center;
+  }
+  .contenedor-uno .navegacion-menu {
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3px;
+  }
+  .contenedor-uno .navegacion-menu .btn {
+    background-color: rgba(255, 30, 5, 0.586);
+    width: 100%;
   }
   ul {
     padding-left: 0;
   }
-  .contenedor-items {
-    display: flex;
-    flex-direction: column;
-  }
-  .main-index {
-    border-radius: 12px;
-    width: 100%;
+  main {
     padding: 0;
   }
-  .contenedor-items {
+  main .main-index {
+    border-radius: 12px;
+    width: 70%;
+    padding: 0;
+  }
+  main .main-index .contenedor-items {
     display: flex;
     flex-direction: column;
   }
@@ -301,6 +341,12 @@ footer {
   }
   .leyenda-footer {
     text-align: center;
+  }
+  .__TN {
+    width: 100%;
+    margin-top: 1%;
+    padding-right: 0%;
+    margin: 3% 0%;
   }
   .formTN {
     width: 100%;
@@ -321,7 +367,7 @@ footer {
   .formTN .formTN1 .label-form .btn-form {
     width: 50%;
   }
-  .text_espace {
+  .formTN .formTN1 .text_espace {
     width: 100%;
     height: 6em;
   }
@@ -330,12 +376,6 @@ footer {
   }
   .maps {
     display: none;
-  }
-  .__TN {
-    width: 100%;
-    margin-top: 1%;
-    padding-right: 0%;
-    margin: 3% 0%;
   }
 }
 

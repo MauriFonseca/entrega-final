@@ -17,15 +17,17 @@ ul li{
         align-items: center;
         gap: 5px;
         margin: 5px 5px;
-    }
-}
-.btn{
-    background-color: map-get($map: $colors , $key: botones);
-    animation-name: efecto_boton;
-    animation-timing-function: ease-in;
-    animation-duration: 2s;
-    &:hover{
-        background-color: map-get($map: $colors , $key: botones-hover);
+        .btn{
+            background-color: map-get($map: $colors , $key: botones);
+            &-efect{
+                animation-name: efecto_boton;
+                animation-timing-function: ease-in;
+                animation-duration: 2s;
+            }
+            &:hover{
+                background-color: map-get($map: $colors , $key: botones-hover);
+            }
+        }
     }
 }
 .title{

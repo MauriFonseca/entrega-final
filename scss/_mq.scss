@@ -1,9 +1,39 @@
 @media (max-width: 711px) {
-//INDEX - VIDEOS
-    .contenedor-items{
+    .contenedor-uno{
         display: flex;
         flex-direction: column;
-    } 
+        flex-wrap: wrap;
+        margin: 1em;
+        .header-index{
+            width: 100%;
+        }
+        .navegacion{
+            display: flex;
+            justify-content: center;
+            &-menu{
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            }
+        }
+    }
+    iframe{
+        width: 100%;
+        height: auto;
+    }
+//INDEX - MAIN
+    .main-index{
+        display: flex;
+        width: 75%;
+        flex-direction: column;
+        .carousel slide{
+            width: 100%;
+        }
+        .contenedor-items{
+            display: flex;
+            flex-direction: column;
+        } 
+    }
 //FORMULARIOS
     .form-img{
         display: none;
@@ -15,37 +45,45 @@
 }
 @media (max-width: 576px) {
 //ESTILOS GENERALES A LAS PAGES    
-        main{
-        padding: 0;
-        }
-        .btn{
-            background-color: map-get($map: $colors , $key: mediaquery-botones);
-            width: 100%;
-        }
-        .navegacion-menu {
+        .contenedor-uno{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 1em;
+            .header-index{
+                width: 100%;
+            }
+        .navegacion{
+            display: flex;
+            justify-content: center;
+        &-menu{
+            flex-wrap: wrap;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 3px;
+            .btn{
+                background-color: map-get($map: $colors , $key: mediaquery-botones);
+                width: 100%;
+            }
         }
+    }
+}
         ul{
             padding-left: 0;
         }
-//MAIN INDEX Videos        
-        .contenedor-items{
-            display: flex;
-            flex-direction: column;
-        }
 //MAIN INDEX Videos  
+        main{
+        padding: 0;
         .main-index{
-         border-radius: 12px;
-         width: 100%;
-         padding: 0;
+            border-radius: 12px;
+            width: 70%;
+            padding: 0;
+            .contenedor-items{
+               display: flex;
+               flex-direction: column;
+              }   
+           }
         }
-        .contenedor-items{
-         display: flex;
-         flex-direction: column;
-        }        
 //DESCUBRE LUZU        
         .row-cols-2{
             flex-direction: column;
@@ -57,8 +95,13 @@
         .leyenda-footer{
             text-align: center;
         }
-
-//FORMULARIOS        
+//FORMULARIOS    
+        .__TN{       
+        width: 100%;
+        margin-top: 1%;
+        padding-right: 0%;
+        margin: 3% 0%;
+        }
         .formTN{
             width: 100%;
             .formTN1{
@@ -76,21 +119,15 @@
                         width: 50%;
                     }
                 }
+                .text_espace{
+                    @include sizes(100%, 6em);
+                }
             }
         }        
-        .text_espace{
-            @include sizes(100%, 6em);
-        }
         .form-img{
             display: none;
         }
         .maps{
             display: none;
-        }
-        .__TN{       
-            width: 100%;
-            margin-top: 1%;
-            padding-right: 0%;
-            margin: 3% 0%;
         }
 }
